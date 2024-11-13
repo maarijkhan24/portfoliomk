@@ -1,36 +1,82 @@
+/* Navbar container */
 .navbar {
+  background-color: #ffffff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #f3f4f6;
-  padding: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
 }
 
-.navbarStart {
-  display: flex;
-  align-items: center;
+/* Logo styling */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
 }
 
+/* Navbar menu styling for larger screens */
+.navMenu {
+  display: flex;
+  gap: 1rem;
+}
+
+.navLink {
+  font-size: 1.25rem;
+  background-color: #3b82f6; /* Light blue background */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* Rounded pill shape */
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  margin: 0 0.5rem;
+}
+
+.navLink:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
+
+/* Contact button */
+.contactButton {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.contactButton:hover {
+  background-color: #333333;
+}
+
+/* Dropdown container */
 .dropdown {
   position: relative;
 }
 
+/* Dropdown button (hamburger icon) */
 .dropdownButton {
-  cursor: pointer;
-  padding: 0.5rem;
+  background: none;
   border: none;
-  background: transparent;
-  display: flex;
-  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  color: #333;
 }
 
 .icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 24px;
+  height: 24px;
 }
 
+/* Dropdown menu */
 .dropdownMenu {
+  display: block;
   position: absolute;
   top: 100%;
   left: 0;
@@ -40,72 +86,41 @@
   width: 13rem;
   margin-top: 0.75rem;
   padding: 0.5rem;
-  z-index: 1;
+  z-index: 10;
 }
 
+/* Dropdown menu item */
 .dropdownMenu li {
+  list-style: none;
+}
+
+.dropdownMenu li a {
+  display: block;
   padding: 0.5rem 1rem;
-}
-
-.dropdownMenu li:hover {
-  background-color: #e0e7ff;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
   text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 8px;
 }
 
-.navbarCenter {
-  display: none;
+.dropdownMenu li a:hover {
+  background-color: #e5e7eb; /* Light gray on hover */
 }
 
+/* Responsive styling */
 @media (min-width: 1024px) {
+  .dropdown {
+    display: none; /* Hide dropdown on large screens */
+  }
   .navbarCenter {
     display: flex;
-    justify-content: center;
   }
 }
 
-.navMenu {
-  display: flex;
-  gap: 1rem;
-}
-
-.navLink {
-  font-size: 1.25rem;
-  font-weight: bold;
-  background-color: #93c5fd;
-  color: #000;
-  border-radius: 9999px;
-  padding: 0.5rem 1.5rem;
-  text-decoration: none;
-  transition: background-color 0.2s;
-}
-
-.navLink:hover {
-  background-color: #3b82f6;
-  color: #fff;
-}
-
-.navbarEnd {
-  display: flex;
-  align-items: center;
-}
-
-.contactButton {
-  font-size: 1.125rem;
-  font-weight: bold;
-  background-color: #000;
-  color: #fff;
-  border-radius: 9999px;
-  padding: 0.5rem 1.5rem;
-  text-decoration: none;
-  transition: background-color 0.2s;
-}
-
-.contactButton:hover {
-  background-color: #333;
+@media (max-width: 1023px) {
+  .navbarCenter {
+    display: none; /* Hide navbar links on small screens */
+  }
 }
