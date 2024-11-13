@@ -1,101 +1,101 @@
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f4f6; /* bg-base-100 */
+  padding: 1rem;
+}
+
+.navbarStart {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownButton {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 1.25rem; /* h-5 */
+  height: 1.25rem; /* w-5 */
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f3f4f6; /* bg-base-100 */
+  border-radius: 0.375rem; /* rounded-box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 13rem; /* w-52 */
+  margin-top: 0.75rem; /* mt-3 */
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 2rem; /* text-4xl */
+  color: #000;
+  text-decoration: none;
+}
+
+.navbarCenter {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbarCenter {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    background-color: #f3f4f6;
+    justify-content: center;
   }
-  
-  .navbar-start {
-    display: flex;
-    align-items: center;
-  }
-  
-  .dropdown {
-    position: relative
-    
-  }
-  
-  .btn-ghost {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 1rem;
-    display: none;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .menu {
-    display: flex;
-    list-style: none;
-  }
-  
-  .menu-item {
-    margin: 0 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #93c5fd;
-    border-radius: 9999px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: #1f2937;
-  }
-  
-  .menu-item:hover {
-    background-color: #60a5fa;
-  }
-  
-  .logo {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #1f2937;
-    text-decoration: none;
-  }
-  
-  .navbar-center {
-    display: none;
-  }
-  
-  .navbar-end {
-    display: flex;
-  }
-  
-  .contact-btn {
-    padding: 0.5rem 1rem;
-    background-color: #000000;
-    color: white;
-    border-radius: 9999px;
-    text-decoration: none;
-  }
-  
-  .contact-btn:hover {
-    background-color: #333333;
-  }
-  
-  @media (min-width: 1024px) {
-    .lg-hidden {
-      display: block;
-    }
-  
-    .navbar-center {
-      display: block;
-    }
-  
-    .dropdown-content {
-      display: none;
-    }
-  }
-  
+}
+
+.navMenu {
+  display: flex;
+  font-weight: 600; /* font-semibold */
+  padding-left: 0.25rem; /* px-1 */
+}
+
+.navLink {
+  font-size: 1.25rem; /* text-xl */
+  background-color: #93c5fd; /* bg-blue-300 */
+  color: #000;
+  border-radius: 9999px; /* rounded-full */
+  padding: 0.5rem 1rem; /* p-2 pr-4 pl-4 */
+  margin: 1rem; /* m-4 */
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.navLink:hover {
+  background-color: #3b82f6;
+}
+
+.navbarEnd {
+  display: flex;
+  align-items: center;
+}
+
+.contactButton {
+  font-size: 1.125rem; /* text-1xl */
+  background-color: #000;
+  color: #fff;
+  border-radius: 9999px; /* rounded-full */
+  padding: 0.5rem 1rem; /* p-2 pr-4 pl-4 */
+  margin: 1rem; /* m-4 */
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.contactButton:hover {
+  background-color: #333;
+}
