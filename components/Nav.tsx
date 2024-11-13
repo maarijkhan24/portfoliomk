@@ -1,17 +1,17 @@
 import React from "react";
-import "./Nav.module.css"
-import Link from "next/link"; // Ensure this import is present
+import Link from "next/link";
+import styles from "./Nav.module.css";
 
 const Nav = () => {
   return (
     <div>
-      <div className="navbar">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn-ghost lg-hidden">
+      <div className={styles.navbar}>
+        <div className={styles.navbarStart}>
+          <div className={styles.dropdown}>
+            <div tabIndex={0} role="button" className={styles.dropdownButton}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className={styles.icon}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -25,7 +25,7 @@ const Nav = () => {
                 />
               </svg>
             </div>
-            <ul tabIndex={0} className="dropdown-content">
+            <ul tabIndex={0} className={styles.dropdownMenu}>
               <li>
                 <Link href="/">Home</Link>
               </li>
@@ -37,31 +37,31 @@ const Nav = () => {
               </li>
             </ul>
           </div>
-          <Link href="/" className="logo">
+          <Link href="/" className={styles.logo}>
             MK
           </Link>
         </div>
-        <div className="navbar-center lg-hidden">
-          <ul className="menu">
+        <div className={styles.navbarCenter}>
+          <ul className={styles.navMenu}>
             <li>
-              <Link href="/" className="menu-item">
+              <Link href="/" className={styles.navLink}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#about" className="menu-item">
+              <Link href="#about" className={styles.navLink}>
                 About
               </Link>
             </li>
             <li>
-              <Link href="#skill" className="menu-item">
+              <Link href="#skill" className={styles.navLink}>
                 Skills
               </Link>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <Link href="#contact" className="contact-btn">
+        <div className={styles.navbarEnd}>
+          <Link href="#contact" className={styles.contactButton}>
             Contact
           </Link>
         </div>
