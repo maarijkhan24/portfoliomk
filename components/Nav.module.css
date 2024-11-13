@@ -4,6 +4,7 @@
   justify-content: space-between;
   background-color: #f3f4f6; /* bg-base-100 */
   padding: 1rem;
+  font-family: Arial, sans-serif;
 }
 
 .navbarStart {
@@ -25,25 +26,34 @@
 }
 
 .icon {
-  width: 1.25rem; /* h-5 */
-  height: 1.25rem; /* w-5 */
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .dropdownMenu {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #f3f4f6; /* bg-base-100 */
-  border-radius: 0.375rem; /* rounded-box */
+  background-color: #f3f4f6;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 13rem; /* w-52 */
-  margin-top: 0.75rem; /* mt-3 */
+  width: 13rem;
+  margin-top: 0.75rem;
   padding: 0.5rem;
   z-index: 1;
 }
 
+.dropdownMenu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdownMenu li:hover {
+  background-color: #e0e7ff; /* Light blue hover */
+}
+
 .logo {
-  font-size: 2rem; /* text-4xl */
+  font-size: 2rem;
+  font-weight: bold;
   color: #000;
   text-decoration: none;
 }
@@ -61,23 +71,23 @@
 
 .navMenu {
   display: flex;
-  font-weight: 600; /* font-semibold */
-  padding-left: 0.25rem; /* px-1 */
+  gap: 1rem;
 }
 
 .navLink {
-  font-size: 1.25rem; /* text-xl */
-  background-color: #93c5fd; /* bg-blue-300 */
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #93c5fd;
   color: #000;
-  border-radius: 9999px; /* rounded-full */
-  padding: 0.5rem 1rem; /* p-2 pr-4 pl-4 */
-  margin: 1rem; /* m-4 */
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
   text-decoration: none;
   transition: background-color 0.2s;
 }
 
 .navLink:hover {
   background-color: #3b82f6;
+  color: #fff;
 }
 
 .navbarEnd {
@@ -86,12 +96,12 @@
 }
 
 .contactButton {
-  font-size: 1.125rem; /* text-1xl */
+  font-size: 1.125rem;
+  font-weight: bold;
   background-color: #000;
   color: #fff;
-  border-radius: 9999px; /* rounded-full */
-  padding: 0.5rem 1rem; /* p-2 pr-4 pl-4 */
-  margin: 1rem; /* m-4 */
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
   text-decoration: none;
   transition: background-color 0.2s;
 }
