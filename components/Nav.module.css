@@ -55,9 +55,10 @@
   background-color: #333333;
 }
 
-/* Dropdown container */
+/* Dropdown container for mobile screens */
 .dropdown {
   position: relative;
+  display: none; /* Hide dropdown by default */
 }
 
 /* Dropdown button (hamburger icon) */
@@ -76,7 +77,7 @@
 
 /* Dropdown menu */
 .dropdownMenu {
-  display: block;
+  display: none; /* Hidden by default, shown when dropdown is active */
   position: absolute;
   top: 100%;
   left: 0;
@@ -89,7 +90,6 @@
   z-index: 10;
 }
 
-/* Dropdown menu item */
 .dropdownMenu li {
   list-style: none;
 }
@@ -106,10 +106,10 @@
 }
 
 .dropdownMenu li a:hover {
-  background-color: #e5e7eb; /* Light gray on hover */
+  background-color: #e5e7eb;
 }
 
-/* Responsive styling */
+/* Media queries for responsive behavior */
 @media (min-width: 1024px) {
   .dropdown {
     display: none; /* Hide dropdown on large screens */
@@ -122,5 +122,8 @@
 @media (max-width: 1023px) {
   .navbarCenter {
     display: none; /* Hide navbar links on small screens */
+  }
+  .dropdown {
+    display: block; /* Show dropdown button on mobile */
   }
 }
