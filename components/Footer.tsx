@@ -1,11 +1,11 @@
 import React from "react";
-import "./Footer.module.css"; // Make sure the path matches your file location
+import styles from "./Footer.module.css"; // Import the CSS Module
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="container">
-        <a className="logo">
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <a className={styles.logo}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -21,7 +21,7 @@ const Footer = () => {
           </svg>
           <span>MK</span>
         </a>
-        <p className="copyright">
+        <p className={styles.copyright}>
           © 2004 MK —{" "}
           <a
             href="https://twitter.com/knyttneve"
@@ -31,7 +31,7 @@ const Footer = () => {
             @maarijkhan_mk
           </a>
         </p>
-        <span className="social-icons">
+        <span className={styles.socialIcons}>
           <a href="https://www.facebook.com" aria-label="Facebook">
             <svg
               fill="currentColor"
