@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css"; // Assuming the CSS file is named Nav.module.css
