@@ -1,143 +1,115 @@
-/* contact-container */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #1e3a8a; /* Dark Sky Blue */
-  }
-  
-  /* contact-section */
-  .contact-section {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 24px 0;
-    color: #4a4a4a;
-  }
-  
-  .contact-container-inner {
-    padding: 0 24px;
-  }
-  
-  /* contact-header */
-  .contact-header {
-    margin-bottom: 24px;
-  }
-  
-  .contact-title {
-    font-size: 2rem;
-    font-weight: 500;
-    text-align: center;
-    color: #1f2937; /* Dark Gray */
-  }
-  
-  .contact-description {
-    max-width: 66%;
-    margin: 0 auto;
-    font-size: 1rem;
-    text-align: center;
-    color: #6b7280; /* Gray */
-  }
-  
-  /* form */
-  .contact-form {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  
-  .form-fields {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  .form-field {
-    width: 48%;
-  }
-  
-  .form-label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 0.875rem;
-    color: #4b5563; /* Gray */
-  }
-  
-  .form-input,
-  .form-textarea {
-    width: 100%;
-    padding: 12px;
-    background-color: rgba(249, 250, 251, 0.5);
-    border: 1px solid #d1d5db; /* Light Gray */
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #111827;
-    outline: none;
-  }
-  
-  .form-input:focus,
-  .form-textarea:focus {
-    border-color: #6366f1; /* Indigo */
-    background-color: white;
-    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
-  }
-  
-  .form-textarea {
-    height: 128px;
-    resize: vertical;
-  }
-  
-  /* Submit Button */
-  .submit-button {
-    background-color: #6366f1; /* Indigo */
-    color: white;
-    padding: 12px 32px;
-    border-radius: 8px;
-    font-size: 1.125rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border: none;
-  }
-  
-  .submit-button:hover {
-    background-color: #4f46e5; /* Darker Indigo */
-  }
-  
-  /* Contact Footer */
-  .contact-footer {
-    text-align: center;
-    margin-top: 32px;
-  }
-  
-  .email-link {
-    color: #6366f1; /* Indigo */
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .email-link:hover {
-    text-decoration: underline;
-  }
-  
-  .address {
-    margin-top: 12px;
-    font-size: 1rem;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  
-  .social-icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 16px;
-    color: #6b7280; /* Gray */
-  }
-  
-  .social-icon:hover {
-    color: #6366f1; /* Indigo */
-  }
-  
+/* Contact.module.css */
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f1f5f9;
+}
+
+.contactSection {
+  width: 100%;
+  max-width: 960px;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contactTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.contactSubtitle {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.contactForm {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.formGroup {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.formField {
+  padding: 1rem;
+  width: 50%;
+}
+
+.formLabel {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.formInput,
+.formTextArea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  transition: border-color 0.3s;
+}
+
+.formInput:focus,
+.formTextArea:focus {
+  border-color: #4c51bf;
+  background-color: #fff;
+}
+
+.formButton {
+  display: flex;
+  margin: 2rem auto 0;
+  background-color: #4c51bf;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formButton:hover {
+  background-color: #3b4ca3;
+}
+
+.contactInfo {
+  padding: 2rem 0 0;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.contactEmail {
+  color: #4c51bf;
+}
+
+.contactAddress {
+  margin: 1.25rem 0;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.socialIcons {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #6b7280;
+}
+
+.socialIcon:hover {
+  color: #4c51bf;
+}
