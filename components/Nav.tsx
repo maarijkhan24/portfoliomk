@@ -1,18 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
 
 const Nav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // Close the dropdown if the user clicks outside of it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className={styles.navbar}>
       <div className={styles.navbarStart}>
-        <div className={styles.dropdown}>
+        <div className={styles.dropdown} ref={dropdownRef}>
           <button onClick={toggleDropdown} className={styles.dropdownButton} aria-label="Menu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
