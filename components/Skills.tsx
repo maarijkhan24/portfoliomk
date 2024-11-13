@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Skills.module.css"; // Import the custom CSS module
+import styles from "./Skills.module.css";
 
 const skills = [
     { name: "JavaScript", level: 90 },
@@ -17,14 +17,13 @@ export default function Skills() {
                     <div
                         key={index}
                         className="w-full"
-                        style={{ "--progress-width": `${skill.level}%` }}
+                        style={{ "--progress-width": `${skill.level}%` } as React.CSSProperties}
                     >
                         <h3 className={styles["skill-name"]}>{skill.name}</h3>
                         <div className={styles["skill-bar"]}>
                             <div className={styles["skill-fill"]}></div>
                         </div>
                     </div>
-
                 ))}
             </div>
         </div>
